@@ -1,0 +1,48 @@
+:root {
+  --taproot-header-background: var(--color-primary-lightest);
+  --taproot-header-border: 1px solid var(--color-secondary-darkest);
+  --taproot-header-shadow: 0 0 1px var(--color-secondary-dark);
+  --taproot-header-menu-background: var(--color-primary-dark);
+  --taproot-header-button-closed-color: var(--color-primary-dark);
+  --taproot-header-button-closed-hover-color: var(--color-primary-darkest);
+  --taproot-header-button-open-color: var(--color-secondary-lightest);
+  --taproot-header-button-open-hover-color: var(--color-secondary-light);
+  --taproot-header-left-padding: var(--layout-left-padding);
+  --taproot-header-button-stroke-width: 6px;
+  --taproot-header-height: 60px;
+}
+
+:host {
+  * {
+    box-sizing: border-box;
+  }
+
+  header {
+    overflow: visible;
+    padding: 0 var(--taproot-header-height) 0 var(--taproot-header-left-padding);
+    height: var(--taproot-header-height);
+    background: var(--taproot-header-background);
+    border-bottom: var(--taproot-header-border);
+    box-shadow: var(--taproot-header-shadow);
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      left: 100%;
+      background: var(--taproot-header-menu-background);
+      height: 100%;
+      overflow-y: auto;
+      transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+      opacity: 0;
+      z-index: 100;
+
+      &.open {
+        left: 0;
+        opacity: 1;
+      }
+    }
+  }
+}

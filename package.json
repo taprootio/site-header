@@ -1,8 +1,8 @@
 {
-  "name": "litdevcontainer",
-  "version": "1.0.0",
-  "description": "Base project for building a Lit web component inside a Visual Studio Code development container",
-  "main": "index.js",
+  "name": "@taprootio/site-header",
+  "version": "0.1.9",
+  "description": "Web component for a site header with a fancy menu button",
+  "main": "dist/site-header.bundled.js",
   "scripts": {
     "build": "rimraf dist && rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
     "build:watch": "rimraf dist && rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript --watch",

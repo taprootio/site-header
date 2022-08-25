@@ -1,0 +1,147 @@
+button.animated-mb {
+  padding: 0;
+  border: none;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 101;
+
+  /**
+  Fancy SVG menu stuff
+  https://uxdesign.cc/the-menu-210bec7ad80c
+  https://codepen.io/ainalem/pen/GeMqdP
+  */
+  .plate {
+    height: var(--taproot-header-height);
+    width: var(--taproot-header-height);
+  }
+
+  .menu-button {
+    filter: url(#animate-button);
+  }
+
+  .x {
+    transform: scale(0);
+    transition: transform 400ms;
+  }
+
+  .line {
+    fill: none;
+    stroke: var(--taproot-header-button-closed-color);
+    stroke-width: var(--taproot-header-button-stroke-width);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform-origin: 50%;
+    transition: stroke-dasharray 400ms 100ms, stroke-dashoffset 400ms 100ms,
+      transform 400ms 100ms, color cubic-bezier(0.075, 0.82, 0.165, 1) 500ms;
+  }
+
+  &:hover .line {
+    stroke: var(--taproot-header-button-closed-hover-color);
+  }
+
+  .x .line {
+    stroke-width: 5.5px;
+  }
+
+  .active .x {
+    transform: scale(1);
+    transition: transform 400ms 350ms,
+      stroke cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+  }
+
+  .active .x .line {
+    stroke: var(--taproot-header-button-open-color);
+    stroke-width: var(--taproot-header-button-stroke-width);
+    transition: color cubic-bezier(0.075, 0.82, 0.165, 1) 500ms;
+  }
+
+  &:hover .active .x .line {
+    stroke: var(--taproot-header-button-open-hover-color);
+  }
+
+  svg {
+    height: var(--taproot-header-height);
+    width: var(--taproot-header-height);
+    position: absolute;
+    left: 0;
+  }
+
+  .line1 {
+    stroke-dasharray: 21 201;
+  }
+
+  .line2 {
+    stroke-dasharray: 21 201;
+    transition-delay: 20ms;
+  }
+
+  .line3 {
+    stroke-dasharray: 21 201;
+    transition-delay: 40ms;
+  }
+
+  .line4 {
+    stroke-dasharray: 21 201;
+    transition-delay: 60ms;
+  }
+
+  .line5 {
+    stroke-dasharray: 21 201;
+    transition-delay: 80ms;
+  }
+
+  .line6 {
+    stroke-dasharray: 21 201;
+    transition-delay: 100ms;
+  }
+
+  .x {
+    transition: transform 400ms 50ms;
+  }
+
+  .active .line {
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms, transform 400ms;
+  }
+
+  .active .line1 {
+    stroke-dasharray: 5 201;
+    stroke-dashoffset: -158px;
+  }
+
+  .active .line2 {
+    stroke-dasharray: 5 201;
+    stroke-dashoffset: -158px;
+    transition-delay: 20ms;
+  }
+
+  .active .line3 {
+    stroke-dasharray: 5 201;
+    stroke-dashoffset: -158px;
+    transition-delay: 40ms;
+  }
+
+  .active .line4 {
+    stroke-dasharray: 5 201;
+    stroke-dashoffset: -158px;
+    transition-delay: 60ms;
+  }
+
+  .active .line5 {
+    stroke-dasharray: 5 201;
+    stroke-dashoffset: -158px;
+    transition-delay: 80ms;
+  }
+
+  .active .line6 {
+    stroke-dasharray: 5 201;
+    stroke-dashoffset: -158px;
+    transition-delay: 100ms;
+  }
+
+  .active .x {
+    transition: transform 400ms 50ms;
+  }
+}

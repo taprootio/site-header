@@ -6,17 +6,118 @@
     <title>example-element Demo</title>
     <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="./node_modules/lit/polyfill-support.js"></script>
-    <script type="module" src="./dist/example-element.bundled.js"></script>
+    <script type="module" src="./dist/site-header.bundled.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&family=Source+Sans+Pro:ital,wght@0,400;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      p {
-        border: solid 1px blue;
-        padding: 8px;
+      html:root {
+        --nav-hue: 60;
+        --left-padding: 20px;
+        --nav-left-padding: var(--left-padding);
+        --nav-font: "EB Garamond", serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 19px;
+      }
+
+      body {
+        padding: 0;
+        margin: 0;
+      }
+
+      main {
+        padding: 0 var(--left-padding);
+      }
+
+      section.nav-links {
+        display: grid;
+        text-align: right;
+        padding: 6px 0;
+      }
+
+      section.nav-links a {
+        font-family: var(--nav-font);
+        display: inline-block;
+        margin: 0 auto;
+        color: var(--nav-light);
+        font-size: 1.5rem;
+        transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+        text-decoration: none;
+      }
+
+      section.nav-links a:hover {
+        text-shadow: 1px 1px 0 var(--nav-dark);
+        color: var(--nav-light-hover);
+        text-decoration: underline;
       }
     </style>
   </head>
   <body>
-    <example-element>
-      <p>This is child content</p>
-    </example-element>
+    <site-header>
+      <h1 style="margin: 0" slot="site-name">Taproot Header</h1>
+      <section class="nav-links" slot="nav-links">
+        <a href="#">Blog</a>
+        <a href="#">Company</a>
+        <a href="#">About</a>
+      </section>
+    </site-header>
+
+    <main>
+      <p>
+        Leverage agile frameworks to provide a robust synopsis for high level
+        overviews. Iterative approaches to corporate strategy foster
+        collaborative thinking to further the overall value proposition.
+        Organically grow the holistic world view of disruptive innovation via
+        workplace diversity and empowerment.
+      </p>
+      <p>
+        Bring to the table win-win survival strategies to ensure proactive
+        domination. At the end of the day, going forward, a new normal that has
+        evolved from generation X is on the runway heading towards a streamlined
+        cloud solution. User generated content in real-time will have multiple
+        touchpoints for offshoring.
+      </p>
+      <p>
+        Capitalize on low hanging fruit to identify a ballpark value added
+        activity to beta test. Override the digital divide with additional
+        clickthroughs from DevOps. Nanotechnology immersion along the
+        information highway will close the loop on focusing solely on the bottom
+        line.
+      </p>
+      <p>
+        Podcasting operational change management inside of workflows to
+        establish a framework. Taking seamless key performance indicators
+        offline to maximise the long tail. Keeping your eye on the ball while
+        performing a deep dive on the start-up mentality to derive convergence
+        on cross-platform integration.
+      </p>
+      <p>
+        Collaboratively administrate empowered markets via plug-and-play
+        networks. Dynamically procrastinate B2C users after installed base
+        benefits. Dramatically visualize customer directed convergence without
+        revolutionary ROI.
+      </p>
+      <p>
+        Efficiently unleash cross-media information without cross-media value.
+        Quickly maximize timely deliverables for real-time schemas. Dramatically
+        maintain clicks-and-mortar solutions without functional solutions.
+      </p>
+      <p>
+        Completely synergize resource taxing relationships via premier niche
+        markets. Professionally cultivate one-to-one customer service with
+        robust ideas. Dynamically innovate resource-leveling customer service
+        for state of the art customer service.
+      </p>
+    </main>
   </body>
 </html>
