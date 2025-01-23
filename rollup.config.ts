@@ -3,15 +3,18 @@ import postcss from "rollup-plugin-postcss"
 import url from "postcss-url"
 import postcssLit from "rollup-plugin-postcss-lit"
 import typescript from "@rollup/plugin-typescript"
+// import terser from '@rollup/plugin-terser';
 import summary from "rollup-plugin-summary"
 import { nodeResolve } from "@rollup/plugin-node-resolve"
-import { terser } from "rollup-plugin-terser"
 
 export default defineConfig({
   input: "./src/site-header.ts",
   plugins: [
     nodeResolve(),
-    typescript(),
+    typescript({
+      sourceMap: true,
+      inlineSources: true
+    }),
     postcss({
       plugins: [
         url({
@@ -20,15 +23,15 @@ export default defineConfig({
       ],
     }),
     postcssLit(),
-    terser({
-      ecma: 2017,
-      module: true,
-      mangle: {
-        properties: {
-          regex: /^__/,
-        },
-      },
-    }),
+    // terser({
+    //   ecma: 2017,
+    //   module: true,
+    //   mangle: {
+    //     properties: {
+    //       regex: /^__/,
+    //     },
+    //   },
+    // }),
     summary(),
   ],
   output: {

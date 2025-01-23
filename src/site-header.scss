@@ -18,12 +18,21 @@
   }
 
   header {
+    display: grid;
+    grid-template-columns: min-content auto min-content min-content;
     overflow: visible;
     padding: 0 var(--taproot-header-height) 0 var(--taproot-header-left-padding);
     height: var(--taproot-header-height);
     background: var(--taproot-header-background);
     border-bottom: var(--taproot-header-border);
     box-shadow: var(--taproot-header-shadow);
+
+    section.buttons {
+      height: var(--taproot-header-height);
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
 
     nav {
       display: flex;

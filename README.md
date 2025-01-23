@@ -1,7 +1,7 @@
 # LitElement Dev Container
 
 When I work on a project, I like to
-[work in a container](https://jeremeevans.com/why-you-should-use-development-containers).
+[work in a container](https://www.jeremeevans.com/articles/why-you-should-write-code-in-containers/).
 This repository serves as a template for developing LitElement web components in a
 Visual Studio Code developement container. These are my requirements:
 
@@ -11,7 +11,7 @@ Visual Studio Code developement container. These are my requirements:
 1. Write tests to ensure things work as expected.
 
 This template will create a project that runs in a container, uses [LitElement](https://lit.dev/) to
-create a web component, [Sass](https://sass-lang.com/) to style it, and [Cypress](https://www.cypress.io/) to test it.
+create a web component.
 
 ## Get started
 
@@ -35,7 +35,6 @@ When multiple developers work on the same codebase, it is very easy to end up wi
 * [Prettier ESLint](https://marketplace.visualstudio.com/items?itemName=rvest.vs-code-prettier-eslint)
 * [lit-plugin](https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin)
 * [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
-* [SCSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss)
 
 These plugins rely on the follow NPM packages:
 
@@ -51,9 +50,7 @@ To build the web component, run `npm run build` from a terminal. It uses rollup 
 * [rimraf](https://github.com/isaacs/rimraf#readme) delete things in a cross-platform way.
 * [@rollup/plugin-node-resolve](https://github.com/rollup/rollup-plugin-node-resolve#readme) loads node modules.
 * [@rollup/plugin-typescript](https://github.com/rollup/plugins/tree/master/packages/typescript#readme) allows all the code to be written in TypeScript.
-* [rollup-plugin-postcss](https://github.com/egoist/rollup-plugin-postcss#readme) compiles SCSS.
   * [postcss-url](https://github.com/postcss/postcss-url#readme) embeds images in the compiled CSS.
-* [rollup-plugin-postcss-lit](https://github.com/umbopepato/rollup-plugin-postcss-lit#readme) imports SCSS into LitElements
 * [rollup-plugin-terser](https://github.com/TrySound/rollup-plugin-terser#readme) bundles the code as small as possible.
 * [rollup-plugin-summary](https://github.com/yousifalraheem/rollup-plugin-summary#readme) lets us know what has been built.
 
@@ -63,4 +60,3 @@ When building an application, it is important to limit dependencies and know why
 
 * [@web/dev-server](https://modern-web.dev/docs/dev-server/overview/) serves our code during development.
 * [@webcomponents/webcomponentsjs](https://github.com/webcomponents/polyfills/tree/master/packages/webcomponentsjs) polyfills for web components in various environments.
-* [start-server-and-test](https://github.com/bahmutov/start-server-and-test#readme) waits for the server to launch before running tests.

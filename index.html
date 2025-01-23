@@ -7,6 +7,7 @@
     <script src="./node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="./node_modules/lit/polyfill-support.js"></script>
     <script type="module" src="./dist/site-header.bundled.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -64,12 +65,16 @@
   </head>
   <body>
     <site-header>
-      <h1 style="margin: 0" slot="site-name">Taproot Header</h1>
+      <h1 style="margin: 0; white-space: nowrap;" slot="site-name">Taproot Header</h1>
       <section class="nav-links" slot="nav-links">
         <a href="#">Blog</a>
         <a href="#">Company</a>
         <a href="#">About</a>
       </section>
+
+      <i data-feather="circle" slot="nav-buttons"></i>
+      <i data-feather="circle" slot="nav-buttons"></i>
+      <i data-feather="circle" slot="nav-buttons"></i>
     </site-header>
 
     <main>
@@ -119,5 +124,9 @@
         for state of the art customer service.
       </p>
     </main>
+
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

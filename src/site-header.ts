@@ -20,12 +20,18 @@ export class SiteHeader extends LitElement {
 
     return html`
       <header>
-        <slot name="site-name"></slot>
+        <section class="brand">
+          <slot name="site-name"></slot>
+        </section>
 
         <nav class=${classMap(navClasses)}>
           <slot name="nav-links"></slot>
         </nav>
 
+        <section class="buttons">
+          <slot name="nav-buttons"></slot>
+        </section>
+        
         <menu-button
           id="mobile-menu-button"
           @opened=${this.openNav}
